@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="sale_report_inherit_template" name="report_sale" inherit_id="sale.report_saleorder_document">
+        <xpath expr="//th[@name='th_description']" position="after">
+            <th name="th_description" class="text-left">Qté(Jours)</th>
+        </xpath>
+        <xpath expr="//tbody//tr//td[@name='td_name']" position="after">
+            <td t-attf-class="text-left {{ 'd-none d-md-table-cell' if report_type == 'html' else '' }}">
+                <span class="text-nowrap" t-field="line.nombre_jours"/>
+            </td>
+        </xpath>
+    </template>
+
+</odoo>
