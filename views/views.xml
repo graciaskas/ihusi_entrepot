@@ -22,12 +22,13 @@
                             <field name="num_declaration"/>
                             <field name="plaque_vehicule"/>
                             <field name="agence_douane"/>
+                            <field name="nature_marchandise"/>
                         </group>
                         <group >
                             <field name="date_in" />
                             <field name="date_out" />
                             <field name="date_chargement"  />
-                                <field name="date_dechargement"  />
+                            <field name="date_dechargement"  />
                         </group>
                     </group>
                 </page>
