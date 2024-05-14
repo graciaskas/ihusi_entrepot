@@ -150,6 +150,10 @@
 
             <table name="table_entrepot" class="table table-sm">
                 <tr>
+                    <th>Nature de marchandise</th>
+                    <td><span t-field="doc.nature_marchandise"/></td>
+                </tr>
+                <tr>
                     <th>Date de chargement</th>
                     <td><span t-field="doc.date_chargement"/></td>
                 </tr>

@@ -21,6 +21,7 @@ class SaleOrder(models.Model):
     date_chargement = fields.Date('Date de chargement')
     date_dechargement = fields.Date('Date de dechargement')
     agence_douane = fields.Many2one('res.partner','Agence en douane')
+    nature_marchandise = fields.Char('Nature de marchandise')
     
 class SaleOrderLine(models.Model):
     _inherit = 'sale.order.line'
