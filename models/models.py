@@ -13,14 +13,14 @@ class AccountMoveLine(models.Model):
 class SaleOrder(models.Model):
     _inherit = 'sale.order'
 
-    num_declaration = field.Char('Numero déclaration')
-    plaque_vehicule = field.Char('Plaque véhicule')
-    date_in = field.Char('Date d\'entrée',required=True)
-    date_out = field.Char('Date de sortie')
+    num_declaration = fields.Char('Numero déclaration')
+    plaque_vehicule = fields.Char('Plaque véhicule')
+    date_in = fields.Date('Date d\'entrée',required=True)
+    date_out = fields.Date('Date de sortie')
 
-    date_chargement = field.Char('Date de chargement')
-    date_dechargement = field.Char('Date de dechargement')
-    agence_douane = field.Many2one('res.partner','Agence en douane')
+    date_chargement = fields.Date('Date de chargement')
+    date_dechargement = fields.Date('Date de dechargement')
+    agence_douane = fields.Many2one('res.partner','Agence en douane')
     
 class SaleOrderLine(models.Model):
     _inherit = 'sale.order.line'
