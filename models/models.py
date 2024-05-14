@@ -9,6 +9,18 @@ from odoo.exceptions import UserError, ValidationError
 class AccountMoveLine(models.Model):
     _inherit = 'account.move.line'
     nombre_jours = fields.Integer('Jours',  readonly=False)
+
+class SaleOrder(models.Model):
+    _inherit = 'sale.order'
+
+    num_declaration = field.Char('Numero déclaration')
+    plaque_vehicule = field.Char('Plaque véhicule')
+    date_in = field.Char('Date d\'entrée',required=True)
+    date_out = field.Char('Date de sortie')
+
+    date_chargement = field.Char('Date de chargement')
+    date_dechargement = field.Char('Date de dechargement')
+    agence_douane = field.Many2one('res.partner','Agence en douane')
     
 class SaleOrderLine(models.Model):
     _inherit = 'sale.order.line'

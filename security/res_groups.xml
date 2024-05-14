@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE xml>
+<odoo noupdate="1">
+    <!--Group for travel user -->
+    <record id="group_entrepot_user" model="res.groups">
+        <field name="name">Utilisateur Ihusi entrepot   </field>
+        <field eval="[(4, ref('base.user_root'))]" name="implied_ids" />
+         <field
+            name="users"
+            eval="[(4, ref('base.user_root')), (4, ref('base.user_admin'))]"
+        />
+    </record>
+</odoo>

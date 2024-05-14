@@ -1,5 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
+    <data>
+        <report 
+            id="report_sale_order"
+            string="Facture entrepot"
+            model="sale.order" 
+            report_type="qweb-pdf"
+            file="ihusi_entrepot.report_saleorder" 
+            name="ihusi_entrepot.report_saleorder" 
+            groups="ihusi_entrepot.group_entrepot_user"
+        />
+    </data>
+</odoo>
+
+<!-- <?xml version="1.0" encoding="utf-8"?>
+<odoo>
 
     <template id="sale_report_inherit_template" name="report_sale" inherit_id="sale.report_saleorder_document">
         <xpath expr="//th[@name='th_description']" position="after">
@@ -12,4 +27,4 @@
         </xpath>
     </template>
 
-</odoo>
+</odoo> -->
